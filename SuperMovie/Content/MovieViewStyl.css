@@ -1,0 +1,190 @@
+﻿body {
+    margin:40px auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+    float: left;
+    font-weight: 300;
+    padding: 10px;
+    width: 760px;
+    margin-top: 20px;
+}
+
+.NewAdd {
+    padding-top: 10px;
+    float: right;
+    margin-top: 70px;
+    position: absolute;
+    margin-left: 10px;
+
+
+}
+.Index-Page-Movie-imag {
+    opacity: 0.78;
+    height: 270px;
+    border-radius:10px;
+    margin-left: 30px;
+    transform: scale(1.0.4);
+    transition: transform 0.4s, opacity 0.4s;
+
+}
+
+.Index-Page-Movie-imag:hover {
+    opacity: 1;
+    transform: scale(1.09);
+
+ 
+}
+
+.Movie-Name-container {
+    margin-top: 15px;
+    margin-left: 30px;
+    font-family:sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 30px;
+    
+    
+
+}
+
+
+.Minput {
+    margin-bottom: 40px;
+    margin-top: 30px;
+    margin-left: 100px;
+    float: left;
+    width: 240px; 
+    height: 34px;
+    border-radius: 17px;
+    color: aliceblue;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1.5px solid rgba(88, 85, 85, 0.9);
+
+    
+    
+}
+
+.TFBackground {
+
+    background-color: rgba(25, 24, 24, 0.58);
+    color: white;
+    padding: 60px;
+    border-radius: 15px;
+    margin-top: 130px;
+    
+
+    
+    
+}
+
+.TF {
+    border: rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+}
+
+
+th {
+
+    font-size: 18px;
+    font-weight: 300;
+    color: floralwhite;
+
+
+}
+
+button{
+    background-color: rgba(30, 30, 30, 0.3);
+    color: #1cb5ed;
+    display: inline-block;
+    padding: 5px 25px;
+    font-weight:300;
+    font-size:100%;
+    text-decoration: none;
+    border:1px solid #1cb5ed;
+    border-radius: 30px;
+    transition: background-color 0.4s,border 0.4s,color 0.4s;
+}
+
+button:link,
+button:visited{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    font-size: 120%;
+    text-decoration: none;
+    border-radius: 300px;
+    border: 1px solid #1cb5ed;
+    color: #1cb5ed;
+    transition: background-color 0.4s, border 0.4s, color 0.4s;
+
+}
+
+button:hover,
+button:active{
+
+   background-color: #1cb5ed;
+    border: 1px solid #1cb5ed;
+    color: #fff;
+  
+
+}
+
+
+.home-button {
+
+    width: 200px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+    font-size: 27px;
+    padding: 20px;
+    margin-left: 5%;
+    text-decoration: none;
+    
+
+    
+
+}
+
+.home-button-container {
+    width: 310px;
+    margin-left: 30.5%;
+    margin-top: 0;
+    margin-top: -250px;
+    background-color: red;
+    margin-bottom: 40px;
+    height: 60px;
+    border-radius: 2.8px;
+    position: absolute;
+    
+    
+
+
+}
+
+.fa-angle-right{
+    padding-top: 15px;
+    font-size: 40px;
+    margin-left: 25px;
+
+}
+
+.home-button:hover,
+.home-button:active {
+
+    color: #ffffff;
+    text-decoration: none;
+    
+}
+
+
+.home-button-container:hover,
+.home-button-container:active {
+
+    transition: 0.5s;
+    text-decoration: none;
+    background-color: rgb(180, 6, 6); 
+
+}

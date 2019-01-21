@@ -1,0 +1,66 @@
+﻿@model IEnumerable<SuperMovie.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+
+
+<body>
+    <div>
+        <h2>Movies</h2>
+
+    
+        <div class="row">
+            <div class="col-md-4 Movie-search">
+                <div id="Movies_filter" class="dataTables_filter">
+                    <input type="search" class="form-control input-sm Minput ion-ios-search" placeholder="Quick Search" aria-controls="Movies">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    @foreach (var item in Model)
+    {
+
+        <article>
+
+            <div class="col-md-3">
+                <div>
+                    <a>
+                        <img src="~/Content/Img/img7.jpg" class="Index-Page-Movie-imag">
+                    </a>
+                </div>
+
+                <div class="Movie-Name-container">
+                    <div>
+                        <p> @Html.ActionLink(item.Name, "Details", "Movies", new { id = item.Id }, null)</p>
+                    </div>
+                    <div>
+                        <p>@Html.DisplayFor(modelItem => item.Genre.Name)</p>
+                    </div>
+                    <div>
+                        <p>@item.ReleaseDate.ToLongDateString()</p>
+                    </div>
+                </div>
+            </div> <!-- item-entry -->
+
+        </article>
+    <!-- end article -->
+
+
+    }
+
+</body>
+

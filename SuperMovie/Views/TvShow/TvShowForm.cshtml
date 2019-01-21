@@ -1,0 +1,69 @@
+﻿@model SuperMovie.ViewModels.TvShowViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+}
+
+
+
+<link href="~/Content/Login-boxStyl.css" rel="stylesheet" type="text/css">
+
+<div class="Register-page">
+<h2>@Model.Title</h2>
+
+<div class="Register-page-contaner">
+
+    @using (Html.BeginForm("Save", "TvShow"))
+    {
+        <div class="form-group">
+            @Html.LabelFor(t => t.Name)
+            @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.Name)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(t => t.ReleaseDate)
+            @Html.TextBoxFor(t => t.ReleaseDate, "{0:d MMM yyyy}", new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.ReleaseDate)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(t => t.GenreId)
+            @Html.DropDownListFor(t => t.GenreId, new SelectList(Model.Genres, "Id", "Name"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(t => t.GenreId)
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(t => t.PicUrl)
+            @Html.TextBoxFor(t => t.PicUrl, new { @class = "form-control" })
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(t => t.VideoUrl)
+            @Html.TextBoxFor(t => t.VideoUrl, new { @class = "form-control" })
+
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(t => t.Description)
+            @Html.TextBoxFor(t => t.Description, new { @class = "form-control" })
+
+        </div>
+
+
+
+
+        @Html.HiddenFor(t => t.Id)
+
+        @Html.AntiForgeryToken()
+        <button type="submit" class="btn btn-primary">Save</button>
+    }
+        
+</div>
+</div>
+
+    @section scripts
+{
+            @Scripts.Render("~/bundles/jqueryval")
+        }

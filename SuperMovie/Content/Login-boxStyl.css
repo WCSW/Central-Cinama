@@ -1,0 +1,54 @@
+﻿.loging-page {
+    
+    background-color: rgba(25, 25, 25, 0.7);
+    width: 70%;
+    padding: 25px;
+    border-radius: 15px;
+    margin-left: 16%;
+    text-align:start;
+
+
+}
+
+span { 
+    float: left;
+    margin-top: 7px;
+              
+
+}
+
+.loging-page-contaner {
+
+    margin-left: 70px;
+}
+
+.RemLog-bch {
+
+    margin-left: -120px;
+
+}
+
+.Register-page {
+
+    background-color: rgba(25, 25, 25, 0.7);
+    width: 70%;
+    padding: 25px;
+    border-radius: 15px;
+    margin-left: 16%;
+    font-weight: 300;
+   
+    
+    
+}
+
+.Register-page-contaner {
+
+    margin: 20px 50px;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+
+    
+
+}
+

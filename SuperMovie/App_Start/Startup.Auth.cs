@@ -54,15 +54,15 @@ namespace SuperMovie
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+               app.UseFacebookAuthentication(
+               appId: "558938624570449",
+               appSecret: "344ed53b5f40fefc5bd6b13d8807b2e5");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "802132845636-bga5fjjrjf92hj7dgl1n8ufpnt2qpfim.apps.googleusercontent.com",
+                ClientSecret = "HwMKiDlHhDIlz69WAMk6_elq"
+            });
         }
     }
 }

@@ -1,0 +1,91 @@
+﻿
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-size:cover;
+    height: 150vh;
+
+}
+
+.row1 {
+    max-width: 1140px;
+    margin: 0 30px 0 30px;
+}
+
+h1 {
+
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+p {
+    
+    font-weight: 200;
+}
+
+
+.Details-container {
+
+    background-color: rgba(25, 24, 24, 0.58);
+    position: absolute;
+    width: 1140px;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    padding: 60px;
+                  
+
+
+}
+
+
+
+.Movie-Details-container {
+    float: left;
+    margin-left: 70px;
+    
+
+}
+
+
+.Movie-image {
+    height: 380px;
+    border-radius: 10px;
+    float: left;
+    
+
+}
+
+section {
+
+    margin-top: 600px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+.Synopsis {
+
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 681px;
+    padding-left: 30px;
+    padding-top: 5px;
+    height: 138px;
+    border-radius: 10px;
+    font-size: 13px;
+
+}
+
+.youtube-container {
+
+    background-color: red;
+    margin-top: 50%;
+    width: 50%;
+    
+}

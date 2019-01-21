@@ -1,0 +1,141 @@
+//@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700|Roboto:300,400,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Source+Sans+Pro:300,400,600,700,900');
+
+//$headingFont: 'Roboto', sans-serif;
+//$contentFont: 'Roboto Mono', monospace;
+
+$headingFont: 'Source Sans Pro', sans-serif;
+$contentFont: 'Open Sans', sans-serif;
+
+$h1Size: 4.0rem;
+$h2Size: 3.5rem;
+$h3Size: 3.0rem;
+$h4Size: 2.5rem;
+$baseFontSize: 1.6rem;
+
+$black: #000000;
+$white: #ffffff;
+
+@mixin transition($type, $duration, $style) {
+  transition-property: $type;
+  -moz-transition-property: $type;
+  -webkit-transition-property: $type;
+  -o-transition-property: $type;
+  -ms-transition-property: $type;
+  transition-duration: $duration;
+  -webkit-transition-duration: $duration;
+  -ms-transition-duration: $duration;
+  -moz-transition-duration: $duration;
+  -o-transition-duration: $duration;
+  transition-timing-function: $style;
+  -webkit-transition-timing-function: $style;
+  -o-transition-timing-function: $style;
+  -ms-transition-timing-function: $style;
+  -moz-transition-timing-function: $style;
+}
+
+@mixin buttonReset() {
+  cursor: pointer;
+  padding: 0 18px;
+  color: transparent;
+  background-color: transparent;
+  border: 2px solid transparent;
+  font-weight: 700;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 44px;
+  display: inline-block;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	height: 100%;
+  color: $black;
+  font-size: $baseFontSize;
+  font-family: $contentFont;
+	overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.restrictScroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headingFont;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+ 
+h1 {
+  font-size: $h1Size;
+}
+h2 {
+  font-size: $h2Size;
+}
+h3 {
+  font-size: $h3Size;
+}
+h4 {
+  font-size: $h4Size;
+}
+
+.positionRelative {
+  position: relative;
+}
+
+.customRow:before, .customRow:after {
+  display: table;
+  content: "";
+}
+
+.customRow:after {
+  clear: both;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  color: #000;
+}
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  background-color: transparent;
+  color: #000;
+  --webkit-text-fill-color: #000;
+}
+
+button.defaultButton, a.defaultButton {
+  @include buttonReset;
+  font-size: $baseFontSize / 1.1;
+}
+button.defaultButton.primaryBlack, a.defaultButton.primaryBlack {
+  color: $white;
+  border-color: $black;
+  background: $black;
+}
+button.defaultButton.secondaryBlack, a.defaultButton.secondaryBlack {
+  border-color: $black;
+  background: $white;
+  color: $black;
+}
+button.defaultButton.primaryWhite, a.defaultButton.primaryWhite {
+  border-color: $white;
+  background: $white;
+	color: $black;
+}
+button.defaultButton.secondaryWhite, a.defaultButton.secondaryWhite {
+  color: $white;
+  border-color: $white;
+  background: transparent;
+}

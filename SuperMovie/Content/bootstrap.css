@@ -314,7 +314,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
-  color: #333333;
+  color: #fff;
   background-color: #ffffff;
 }
 
@@ -341,7 +341,8 @@ a {
 
 a:hover,
 a:focus {
-  color: #2a6496;
+    transition: 0.5s;
+  color: rgb(70, 190, 244);
   text-decoration: underline;
 }
 
@@ -1486,7 +1487,8 @@ th {
 
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
-  background-color: #f5f5f5;
+    transition: 0.8s;
+  background-color: rgba(69, 3, 51, 0.6);
 }
 
 table col[class*="col-"] {
@@ -3828,12 +3830,12 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .nav > li.disabled > a {
-  color: #999999;
+  color: #eeeeee;
 }
 
 .nav > li.disabled > a:hover,
 .nav > li.disabled > a:focus {
-  color: #999999;
+  color: #eeeeee;
   text-decoration: none;
   cursor: not-allowed;
   background-color: transparent;
@@ -4246,6 +4248,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 20px;
+  font-weight:300;
 }
 
 @media (max-width: 767px) {
@@ -4501,8 +4504,9 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
-  border-color: #080808;
+  background-color: #444;
+  border-color: #444;
+  background-color: rgba(33, 33, 33, 0.65);
 }
 
 .navbar-inverse .navbar-brand {
@@ -4516,7 +4520,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-text {
-  color: #999999;
+  color: #e8e8e8;
 }
 
 .navbar-inverse .navbar-nav > li > a {
@@ -4525,7 +4529,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 .navbar-inverse .navbar-nav > li > a:hover,
 .navbar-inverse .navbar-nav > li > a:focus {
-  color: #ffffff;
+  color: #1cb5ed;
   background-color: transparent;
 }
 
@@ -5647,15 +5651,20 @@ body.modal-open,
 }
 
 .modal-content {
-  position: relative;
-  background-color: #ffffff;
+
+    text-align: center;
+    
+    height: 250px;
+    position: relative;
+  background-color: rgba(30, 30, 40, 0.8);
   border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(178, 178, 178, 0.79);
   border-radius: 6px;
   outline: none;
   -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
           box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
+  
 }
 
 .modal-backdrop {
@@ -5695,18 +5704,23 @@ body.modal-open,
 
 .modal-body {
   position: relative;
+    font-size: 20px;
+    width: 83%;
+    margin-left: 50px;
   padding: 20px;
+    color: rgba(253, 4, 4, 1);
 }
 
 .modal-footer {
   padding: 19px 20px 20px;
-  margin-top: 15px;
-  text-align: right;
-  border-top: 1px solid #e5e5e5;
+  margin-top: 20px;
+  text-align: center;
+  
 }
 
 .modal-footer:before,
 .modal-footer:after {
+
   display: table;
   content: " ";
 }

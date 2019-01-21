@@ -1,0 +1,90 @@
+
+#thumbnail-slider {
+    margin:20px auto;
+    margin-bottom: 0;
+    width:100%;
+    max-width:1000px;
+    padding:0;
+    box-sizing:border-box;
+    position:relative;
+    -webkit-user-select: none;
+    user-select:none;
+}
+
+#thumbnail-slider div.inner {    
+    position:relative;
+    overflow:hidden;
+    padding:0;
+    margin:0;
+}
+ 
+#thumbnail-slider div.inner ul {    
+    white-space:nowrap;
+    position:relative;
+    left:0; top:0;
+    list-style:none;
+    font-size:0;
+    padding:0;
+    margin:0;
+    float:left!important;
+    width:auto!important;
+    height:auto!important;
+}
+
+#thumbnail-slider ul li {
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom:0;
+    margin-left:-30px; margin-right:-30px; 
+    -webkit-transform:scale(0.9);
+    transform:scale(0.7);
+    -webkit-transition:-webkit-transform 0.5s;
+    transition:transform 1s;
+    box-sizing:content-box;
+    text-align:center;
+    vertical-align:middle;
+    padding:0;
+    position:relative;
+    list-style:none;
+    backface-visibility:hidden; 
+}
+
+#thumbnail-slider ul li.active {
+    -webkit-transform:scale(1.15); 
+    transform:scale(1.15);
+    background-color:transparent;
+    
+}
+
+#thumbnail-slider .thumb {
+    width:100%;
+    height: 47%;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center center;
+    display:block;
+    position:absolute;
+    font-size:0;
+    cursor:inherit;
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(255,255,255,0.4)));
+    transition:all linear 0.5s;
+}
+
+    #thumbnail-slider .thumb {
+        -webkit-transform: perspective(500px) translateX(1px) translateZ(-30px) rotateY(30deg);
+        transform: perspective(500px) translateX(1px) translateZ(-30px) rotateY(30deg);
+    }
+
+    #thumbnail-slider .active .thumb {
+        -webkit-transform: translateX(0px) translateZ(0px) rotateY(0deg); 
+        transform: translateX(0px) translateZ(0px) rotateY(0deg); 
+    }
+
+    #thumbnail-slider li.active ~ li .thumb {
+        -webkit-transform: perspective(500px) translateX(-1px) translateZ(-30px) rotateY(-30deg); 
+        transform: perspective(500px) translateX(-1px) translateZ(-30px) rotateY(-30deg); 
+    }
+
+#thumbnail-slider-pause-play {display:none;}
+#thumbnail-slider-prev, #thumbnail-slider-next {display:none;}
+

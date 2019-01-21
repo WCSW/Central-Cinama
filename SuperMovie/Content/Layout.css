@@ -1,0 +1,107 @@
+﻿body {
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)) ,url(Img/myke-simon-1037761-unsplash.jpg);
+    background-color:#fff;
+    background-size: cover;
+    background-position: center;
+    font-family: font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-rendering: optimizeLegibility;
+}
+
+footer {
+
+    border-radius: 7px;
+    position:center;
+    background-color:#444;
+    font-size:90%;
+    padding:40px;
+    padding-left:0px;
+    padding-right:0px;
+    background-color: rgba(33, 33, 33, 0.5);
+}
+
+.footer-nav {
+    list-style:none;
+    float:left;
+    padding-left:10px;
+}
+
+.social-links {
+    padding-left: 150px;
+    height: 50px;
+    list-style:none;
+    float:right;
+    width: 400px;
+}
+
+.footer-nav li,
+.social-links li {
+    display:inline-block;
+    margin-right:30px;
+
+    }
+
+.footer-nav li:last-child,
+.social-links li:last-child {
+     
+    margin-left:0;
+        
+    }
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links a:link,
+.social-links a:visited {
+        text-decoration:none;
+        border:0;
+        color:#fff;
+        transition:color 0.3s;
+    }
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color:#1cb5ed
+}
+
+.social-links a:link,
+.social-links a:visited{
+    font-size :140%;
+}
+
+.fa-facebook,
+.fa-twitter,
+.fa-google-plus,
+.fa-instagram{
+    transition:color 0.3s;
+}
+
+.fa-facebook:hover{
+    color:#3b5998;
+}
+
+.fa-twitter:hover{
+    color:#00aced;
+}
+
+.fa-google-plus:hover{
+    color:#dd4b39;
+}
+
+.fa-instagram:hover{
+    color:rgb(244, 24, 109);
+}
+
+footer p {
+    color: #7c7c7c;
+    text-align: center;
+    font-size: 90%;
+    margin-top: 30px;
+    
+}
+
+.navbar navbar-inverse navbar-fixed-top{
+    background-color:#1cb5ed;
+    background-color: rgba(33, 33, 33, 0.29);
+}
+

@@ -1,0 +1,210 @@
+---
+#Front Matter Initialization - Do Not Delete
+---
+
+@import "variables";
+
+.outerContainer {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
+.githubLink {
+  width: 45px;
+  background: $black;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 300;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.35);
+  a {
+	display: block;
+	img {
+	  padding: 5px;
+	}
+  }
+}
+
+.restrictScroll {
+  height: 100vh;
+  overflow: hidden;
+}
+
+.mainPage {
+  .backgroundBannerParent {
+	position: fixed;
+	top: -60px;
+	left: 0;
+	width: 100%;
+	height: calc(100% + 60px);
+	z-index: 0;
+	background: url("../assets/images/fixed-banner-bg.jpg") no-repeat center center;
+		background-repeat: no-repeat;
+		background-position: center center;
+	background-size: cover;
+		@include transition(all, 2.5s, ease-out);
+  }
+  .backgroundBannerParent:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.15);
+  }
+	.backgroundBannerParent.hiddenTransform {
+		transform: scale(0.7);
+		-webkit-transform: scale(0.7);
+		opacity: 0;
+	}
+  .frontContent {
+	position: relative;
+	z-index: 5;
+  }
+  .jumbotronParent {
+	min-height: 100vh;
+	padding:  60px 15px;
+	.imageContainer {
+	  width: 100px;
+	  height: 100px;
+	  border-radius: 50%;
+	  border: 1px solid $white;
+	  padding: 20px;
+	  margin: 15px auto 100px;
+	}
+	.headingContainer {
+	  border-top: 1px solid $white;
+	  border-bottom: 1px solid $white;
+			max-width: 450px;
+			margin: 0 auto;
+	  h1, p {
+		color: $white;
+	  }
+	  h1 {
+		font-size: $h1Size/1.5;
+		font-weight: 900;
+		letter-spacing: 2px;
+	  }
+	  p {
+		font-weight: 300;
+		font-size: $baseFontSize/1.4;
+		text-transform: uppercase;
+	  }
+	}
+	.headingContainer:before {
+	  content: "";
+	  position: absolute;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  -webkit-transform: translateX(-50%);
+	  top: -100px;
+	  width: 1px;
+	  height: 100px;
+	  background: $white;
+	}
+  }
+  .mainContentBody {
+		background: $white;
+	.contentSegment {
+			padding: 60px 15px;
+			transition-delay: 1.0s;
+			@include transition(all, 0.5s, linear);
+	  .headingSection {
+		.pointerIcon {
+		  max-width: 15px;
+		}
+		h2 {
+		  font-size: $h2Size/1.5;
+		  margin-top: 10px;
+		}
+	  }
+	  .bodySection {
+		p {
+		  font-size: $baseFontSize/1.2;
+		  font-weight: 300;
+		  line-height: 23px;
+					.highlight {
+						display: inline-block;
+						padding: 0 5px;
+						background: #e5e5e5;
+						font-weight: 500;
+					}
+					b {
+						font-weight: 500;
+					}
+		}
+				.codeContainer {
+					overflow: auto;
+					pre {
+						background: $black;
+						color: $white;
+						padding: 15px;
+					}
+					pre code {
+						display: block;
+						min-width: 650px;
+					}
+				}
+	  }
+	}
+		.contentSegment.hiddenTransform {
+			transform: translateY(10px);
+			-webkit-transform: translateY(10px);
+			opacity: 0;
+		}
+		.contentSegment:last-child {
+			margin-bottom: 0;
+		}
+  }
+}
+
+@media only screen and (min-width: 768px) {
+	.mainPage {
+		.jumbotronParent {
+			max-height: 600px;
+		}
+		.mainContentBody {
+			.contentSegment {
+				padding: 60px 25px;
+				max-width: 700px;
+				margin-left: 10px;
+				.headingSection {
+					h2 {
+						margin-top: 15px;
+						margin-bottom: 15px;
+					}
+				}
+				.bodySection {
+					p {
+						font-size: $baseFontSize/1.1;
+						line-height: 28px;
+						margin-bottom: 15px;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.mainPage {
+	.jumbotronParent {
+	  .headingContainer {
+		h1 {
+		  font-size: $h1Size * 1.2;
+		}
+	  }
+	}
+		.mainContentBody {
+			margin-top: -50px;
+			.contentSegment {
+				padding-left: 150px;
+			}
+		}
+	}
+}
+

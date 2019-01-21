@@ -1,44 +1,64 @@
-﻿<!DOCTYPE html>
+﻿@using SuperMovie.Models
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/ionicons.min.css" rel="stylesheet">
+    <title>Super Movie</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    @Mvc.RazorTools.BundleManager.Styles.Render()
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
-                @Html.Partial("_LoginPartial")
-            </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
+            @if (User.IsInRole(RoleName.CanManageMovies))
+               { 
+                   @Html.Partial("_NavBar")
+               }
+            else
+               {
+                   @Html.Partial("_NavBar -guest")
+               }
+                
+        
+    
+<div class="container body-content">
+    @RenderBody()
+  
+    <section class="container col-md-12" style="overflow-x:auto;">
         <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
-    </div>
+        <footer class="row">
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+            <div class="col-md-6">
+                <ul class="footer-nav">
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href=""><img src="~/Content/Img/iCloud.png" style="height: 32px; width: 100px;"></a></li>
+                    <li><a href=""><img src="~/Content/Img/android.png" style="width: 90px; height: 30px;"></a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <ul class="social-links">
+                    <li><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa fa-google-plus"></i></a></li>
+                    <li><a href=""><i class="fa fa-instagram"></i></a></li>
+
+                </ul>
+            </div>
+            <div>
+                <p>
+                    Copyright &copy; 2018 by Super Movie. All rights reserved.
+                </p>
+            </div>
+
+        </footer>
+    </section>
+
+</div>
+
+
+@Scripts.Render("~/bundles/lib")
+@RenderSection("scripts", required: false)
 </body>
 </html>
